@@ -11,23 +11,27 @@ import android.widget.TextView;
 import com.example.gsu.pawardemo.ListViewActivity;
 import com.example.gsu.pawardemo.R;
 
+import java.util.ArrayList;
+
 /**
  * Created by mihiran on 1/25/2017.
  */
 
 public class ListViewAdapter extends BaseAdapter {
 
+    private final ArrayList<String> listResult;
     private Context mContext;
     private final LayoutInflater mInflator;
 
-    public ListViewAdapter(Context context) {
+    public ListViewAdapter(Context context, ArrayList<String> listResult) {
         mContext = context;
+        this.listResult = listResult;
         mInflator = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return 100;
+        return listResult.size();
     }
 
     @Override
@@ -57,10 +61,12 @@ public class ListViewAdapter extends BaseAdapter {
         }
         holder.textView1.setText(String.valueOf(position));
         holder.textView3.setText(String.valueOf(position));
+        holder.textView2.setText(listResult.get(position));
 
         if (position%2==0) {
             holder.textView1.setVisibility(View.VISIBLE);
             holder.textView3.setVisibility(View.INVISIBLE);
+
         } else {
             holder.textView1.setVisibility(View.INVISIBLE);
             holder.textView3.setVisibility(View.VISIBLE);
