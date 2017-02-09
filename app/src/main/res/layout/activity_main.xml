@@ -40,7 +40,7 @@
             android:layout_height="36dp"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:background="@android:color/white"
+            android:background="@drawable/bt_style_xml"
             android:layout_marginRight="12dp"/>
 
     </RelativeLayout>
