@@ -33,9 +33,9 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
-       /* listResult= new ArrayList<String>();
+        listResult= new ArrayList<String>();
         creatFakeResult();
-        initialView();*/
+        initialView();
 
         ViewPager1=(ViewPager)findViewById(R.id.VIEW_PAGER);
         adapter=new CustomAdapter(this);
