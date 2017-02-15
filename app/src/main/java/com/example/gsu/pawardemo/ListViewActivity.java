@@ -2,6 +2,7 @@ package com.example.gsu.pawardemo;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
@@ -24,13 +25,21 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
 
     private ListView listView;
     private ArrayList<String>listResult;
+
+    public ViewPager ViewPager1;
+    public CustomAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
-        listResult= new ArrayList<String>();
+       /* listResult= new ArrayList<String>();
         creatFakeResult();
-        initialView();
+        initialView();*/
+
+        ViewPager1=(ViewPager)findViewById(R.id.VIEW_PAGER);
+        adapter=new CustomAdapter(this);
+        ViewPager1.setAdapter(adapter);
     }
 
     private void creatFakeResult() {
@@ -55,11 +64,9 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
 
     private void initialView(){
         listView = (ListView) findViewById(R.id.list_view);
-        View view = getLayoutInflater().inflate(R.layout.list_view_header,null);
+       /* View view = getLayoutInflater().inflate(R.layout.list_view_header,null);
         LinearLayout listViewHeader = (LinearLayout)view.findViewById(R.id.list_view_header);
-        listView.addHeaderView(listViewHeader);
-
-
+        listView.addHeaderView(listViewHeader);*/
         TextView tv = new TextView(this);
         tv.setText("We have no more content.");
         tv.setTextSize(28);
@@ -74,7 +81,10 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this, "listView was clicked at position:" +position,Toast.LENGTH_LONG).show();
+       Toast.makeText(this, "listView was clicked at position:" +position,Toast.LENGTH_LONG).show();
     }
+
 }
+
+
 

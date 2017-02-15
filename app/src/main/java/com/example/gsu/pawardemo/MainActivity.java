@@ -2,11 +2,16 @@ package com.example.gsu.pawardemo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.gsu.pawardemo.util.UtilLog;
+
+import butterknife.ButterKnife;
+import butterknife.OnCheckedChanged;
+import butterknife.OnClick;
 
 
 public class MainActivity extends BaseActivity {
@@ -14,12 +19,20 @@ public class MainActivity extends BaseActivity {
     private ImageButton bt1;
     private ImageButton bt3;
 
+    @OnClick(R.id.bt2)
+
+    public void button2Click(){
+    toActivity(DialogActivity.class);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialView();
         initialListener();
+        ButterKnife.bind(this);
+
     }
 
     private void initialView(){

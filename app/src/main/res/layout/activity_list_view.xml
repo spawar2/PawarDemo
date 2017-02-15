@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.gsu.pawardemo.ListViewActivity"
     android:orientation="horizontal">
+
+    <android.support.v4.view.ViewPager
+        android:layout_height="100dp"
+        android:id="@+id/VIEW_PAGER"
+        android:layout_width="match_parent">
+    </android.support.v4.view.ViewPager>
 
     <ListView
         android:id="@+id/list_view"
@@ -15,8 +20,6 @@
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp"
 
-        ></ListView>
+        android:layout_below="@+id/VIEW_PAGER"></ListView>
 
-
-
-</LinearLayout>
+</RelativeLayout>

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class ViewPagerActivity extends AppCompatActivity {
 
-    private ViewPager viewPager;
+    public ViewPager viewPager;
     private ArrayList<Fragment> fragmentList = new ArrayList<Fragment>();
     private TableLayout tabLayout;
 
