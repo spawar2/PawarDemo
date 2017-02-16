@@ -2,12 +2,15 @@ package com.example.gsu.pawardemo;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.IntDef;
 import android.support.v7.app.AlertDialog;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+
+import com.example.gsu.pawardemo.dialog.CustomDialog;
 
 import java.util.ArrayList;
 
@@ -48,9 +51,23 @@ private int checkedID;
                 inputDialog();
                 break;
             case R.id.rb8:
+                customDialog();
                 break;
             default:
         }
+    }
+
+    private void customDialog() {
+        final CustomDialog dialog = new CustomDialog(this, new CustomDialog.ICustomDialogEventListener() {
+            @Override
+            public void onClickListener() {
+                Intent intent = new Intent();
+                intent.putExtra("Message", "Dialog");
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
+        dialog.show();
     }
 
     private void inputDialog() {

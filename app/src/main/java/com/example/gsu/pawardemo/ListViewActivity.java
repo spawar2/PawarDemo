@@ -1,6 +1,7 @@
 package com.example.gsu.pawardemo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -84,6 +85,13 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
        Toast.makeText(this, "listView was clicked at position:" +position,Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        intent.putExtra("Message", "ListView");
+        setResult(RESULT_OK, intent);
+        super.onBackPressed();
+    }
 }
 
 
