@@ -39,6 +39,7 @@
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:background="@drawable/bt_style_xml"
+            android:id="@+id/activityswitch"
             android:layout_marginRight="12dp"/>
 
     </RelativeLayout>

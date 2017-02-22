@@ -1,20 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.example.gsu.pawardemo">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gsu.pawardemo">
 
-<application android:allowBackup="true" android:name="PawarApplication" android:icon="@mipmap/ic_launcher" android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher" android:supportsRtl="true" android:theme="@style/Theme.AppCompat.NoActionBar">
-    <activity android:name=".MainActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+    <application
+        android:name=".PawarApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-    <activity android:name=".ListViewActivity" />
-    <activity android:name=".ViewPagerActivity"></activity>
-    <activity android:name=".BaseActivity"></activity>
-    <activity android:name=".DialogActivity"></activity>
-</application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".ViewPagerActivity" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".DialogActivity" />
+        <activity
+            android:name=".ActivityA"
+            android:launchMode="standard" />
+        <activity
+            android:name=".ActivityB"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ActivityC"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ActivityD"
+            android:launchMode="singleInstance"
+            ></activity>
+    </application>
 
 </manifest>
-

@@ -19,6 +19,7 @@ public class MainActivity extends BaseActivity {
 
     private ImageButton bt1;
     private ImageButton bt3;
+    private ImageButton activityswitch;
 
     @OnClick(R.id.bt2)
     public void button2Click(){
@@ -39,6 +40,7 @@ public class MainActivity extends BaseActivity {
     private void initialView(){
         bt1 = (ImageButton) findViewById(R.id.bt1);
         bt3 = (ImageButton) findViewById(R.id.id_bt3);
+        activityswitch = (ImageButton) findViewById(R.id.activityswitch);
     }
 
     private void initialListener() {
@@ -73,6 +75,16 @@ public class MainActivity extends BaseActivity {
                 startActivityForResult(intent,3);
             }
         });
+
+
+        activityswitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ActivityA.class);
+                 startActivity(intent);
+            }
+        });
+
     }
 
     @Override
