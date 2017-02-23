@@ -4,19 +4,24 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class ActivityB extends AppCompatActivity {
 
-    private ImageButton toB;
+    private Button toB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b);
+        initialView();
+        initialListener();
+    }
+
 
     private void initialView(){
-        toB = (ImageButton) findViewById(R.id.toB);
+        toB = (Button) findViewById(R.id.toB);
     }
 
     private void initialListener() {

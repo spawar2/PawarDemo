@@ -4,26 +4,29 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class ActivityA extends AppCompatActivity {
 
-    private ImageButton activityswitch;
+    private Button toA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity);
+        initialView();
+        initialListener();
     }
 
 
     private void initialView(){
-        activityswitch = (ImageButton) findViewById(R.id.activityswitch);
+        toA = (Button) findViewById(R.id.toA);
     }
 
     private void initialListener() {
 
-        activityswitch.setOnClickListener(new View.OnClickListener() {
+        toA.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
