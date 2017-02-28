@@ -1,18 +1,22 @@
 package com.example.gsu.pawardemo;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.annotation.IdRes;
 import android.support.annotation.IntDef;
 import android.support.v7.app.AlertDialog;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.os.Handler;
 
 import com.example.gsu.pawardemo.dialog.CustomDialog;
 
 import java.util.ArrayList;
+//import java.util.logging.Handler;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,6 +28,22 @@ import butterknife.OnClick;
 
 public class DialogActivity extends BaseActivity {
 private int checkedID;
+    public final int DIALOG = 12345;
+
+    Handler mHandler = new Handler(){
+        @Override
+      public void handleMessage(Message msg)  {
+          switch (msg.what) {
+              case DIALOG:
+                  Bundle bundle = msg.getData();
+                  String s= bundle.getString("msg");
+                  toastShort("Dialog Message:"+s);
+                  break;
+              default:
+          }
+            super.handleMessage(msg);
+      }
+    };
 
     @BindView(R.id.rdg) RadioGroup radioGroup;
     @OnClick(R.id.dialog_ok)
@@ -107,6 +127,14 @@ private int checkedID;
                     } catch (InterruptedException e){
                         e.printStackTrace();
                     }
+                progressDialog.cancel();
+             //   toastShort("Downloading Sucess!"); so use handler
+                Bundle bundle = new Bundle();
+                bundle.putString("msg", "Download sucess");
+                Message msg = new Message();
+                msg.what = DIALOG;
+                msg.setData(bundle);
+                mHandler.sendMessage(msg);
                 progressDialog.cancel();
             }
 

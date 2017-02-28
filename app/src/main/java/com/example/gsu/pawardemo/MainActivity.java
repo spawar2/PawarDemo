@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ public class MainActivity extends BaseActivity {
     private ImageButton bt1;
     private ImageButton bt3;
     private ImageButton activityswitch;
+    private Button main_timer_bt;
 
     @OnClick(R.id.bt2)
     public void button2Click(){
@@ -41,6 +43,7 @@ public class MainActivity extends BaseActivity {
         bt1 = (ImageButton) findViewById(R.id.bt1);
         bt3 = (ImageButton) findViewById(R.id.id_bt3);
         activityswitch = (ImageButton) findViewById(R.id.activityswitch);
+        main_timer_bt = (Button) findViewById(R.id.main_timer_bt);
     }
 
     private void initialListener() {
@@ -72,6 +75,19 @@ public class MainActivity extends BaseActivity {
          //       Intent intent = new Intent(v.getContext(), ListViewActivity.class);
            //     startActivity(intent);
                 Intent intent = new Intent(v.getContext(), ListViewActivity.class);
+                startActivityForResult(intent,3);
+            }
+        });
+
+        main_timer_bt.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                //       Intent intent = new Intent(v.getContext(), ListViewActivity.class);
+                //     startActivity(intent);
+                Intent intent = new Intent(v.getContext(), Timer_Activity.class);
                 startActivityForResult(intent,3);
             }
         });
