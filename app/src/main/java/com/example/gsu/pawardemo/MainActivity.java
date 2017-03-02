@@ -22,6 +22,7 @@ public class MainActivity extends BaseActivity {
     private ImageButton bt3;
     private ImageButton activityswitch;
     private Button main_timer_bt;
+    private Button main_timer_bt_2;
 
     @OnClick(R.id.bt2)
     public void button2Click(){
@@ -44,6 +45,7 @@ public class MainActivity extends BaseActivity {
         bt3 = (ImageButton) findViewById(R.id.id_bt3);
         activityswitch = (ImageButton) findViewById(R.id.activityswitch);
         main_timer_bt = (Button) findViewById(R.id.main_timer_bt);
+        main_timer_bt_2 = (Button) findViewById(R.id.main_timer_bt_2);
     }
 
     private void initialListener() {
@@ -92,6 +94,18 @@ public class MainActivity extends BaseActivity {
             }
         });
 
+        main_timer_bt_2.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                //       Intent intent = new Intent(v.getContext(), ListViewActivity.class);
+                //     startActivity(intent);
+                Intent intent = new Intent(v.getContext(), AnimationActivity.class);
+                startActivityForResult(intent,3);
+            }
+        });
 
         activityswitch.setOnClickListener(new View.OnClickListener() {
             @Override

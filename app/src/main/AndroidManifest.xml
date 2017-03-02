@@ -33,7 +33,8 @@
         <activity
             android:name=".ActivityD"
             android:launchMode="singleInstance" />
-        <activity android:name=".Timer_Activity"></activity>
+        <activity android:name=".Timer_Activity" />
+        <activity android:name=".AnimationActivity"></activity>
     </application>
 
 </manifest>

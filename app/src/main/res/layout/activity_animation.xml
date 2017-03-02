@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_animation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.example.gsu.pawardemo.AnimationActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:background="@android:color/black">
+
+
+            <Button
+
+                android:text="alpha"
+                android:textSize="10dp"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:id="@+id/anim_alpha"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"/>
+
+            <Button
+                android:text="scale"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:id="@+id/anim_scale"
+                android:textSize="10dp"/>
+
+            <Button
+                android:text="rotate"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:id="@+id/anim_rotate"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="10dp"/>
+
+
+            <Button
+                android:text="trans"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:id="@+id/anim_trans"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="10dp"/>
+
+
+            <Button
+                android:text="set"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:id="@+id/anim_set"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/anim_tv"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp"
+        android:textSize="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Animation"
+        />
+
+
+</RelativeLayout>
