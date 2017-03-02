@@ -1,5 +1,4 @@
-/*
-package com.example.gsu.pawardemo.dialog;
+package com.example.gsu.pawardemo.Dialog_new;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -7,18 +6,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import com.example.gsu.pawardemo.R;
 
-import java.net.InterfaceAddress;
-
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-*/
 /**
- * Created by GSU on 2/15/17.
- *//*
+ * Created by GSU on 3/1/17.
+ */
 
-
-public class CustomDialog extends Dialog {
+public class custom_dialog extends Dialog {
 
     @OnClick(R.id.dialog_ok)
     public void okClick(){
@@ -33,7 +28,7 @@ public class CustomDialog extends Dialog {
         public void onClickListener();
     }
 
-    public CustomDialog(@NonNull Context context, ICustomDialogEventListener listener) {
+    public custom_dialog(@NonNull Context context, ICustomDialogEventListener listener) {
         super(context, R.style.dialog);
         this.listener = listener;
     }
@@ -47,4 +42,3 @@ public class CustomDialog extends Dialog {
     }
 
 }
-*/

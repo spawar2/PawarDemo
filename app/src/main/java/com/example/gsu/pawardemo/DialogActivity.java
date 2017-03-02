@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.os.Handler;
 
-import com.example.gsu.pawardemo.dialog.CustomDialog;
+import com.example.gsu.pawardemo.Dialog_new.custom_dialog;
 
 import java.util.ArrayList;
 //import java.util.logging.Handler;
@@ -78,13 +78,15 @@ private int checkedID;
     }
 
     private void customDialog() {
-        final CustomDialog dialog = new CustomDialog(this, new CustomDialog.ICustomDialogEventListener() {
+        final custom_dialog dialog = new custom_dialog(this, new custom_dialog.ICustomDialogEventListener() {
             @Override
             public void onClickListener() {
-                Intent intent = new Intent();
+                /*Intent intent = new Intent();
                 intent.putExtra("Message", "Dialog");
                 setResult(RESULT_OK, intent);
-                finish();
+                finish();*/
+
+                toastShort("Ok button was clicked");
             }
         });
         dialog.show();
