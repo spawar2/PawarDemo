@@ -2,6 +2,7 @@ package com.example.gsu.pawardemo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ScaleGestureDetectorCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -167,11 +168,14 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
              //   Intent intent = new Intent(v.getContext(), MainActivity.class);
               //  startActivityForResult(intent,3);
 
-
-                mDrawerLayout.openDrawer(Gravity.LEFT);          }
+                if(mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    mDrawerLayout.closeDrawer(Gravity.LEFT); //CLOSE Nav Drawer!
+                }else{
+                    mDrawerLayout.openDrawer(Gravity.LEFT); //OPEN Nav Drawer!
+                }
+            }
 
         });
-
 
         activityswitch.setOnClickListener(new View.OnClickListener() {
             @Override
