@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main_fl"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/black">
 
@@ -90,7 +91,6 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/main_fl"
         android:layout_above="@id/tool_bar"
         android:layout_below="@id/title_bar"
         android:layout_width="match_parent"
