@@ -35,6 +35,7 @@
             android:launchMode="singleInstance" />
         <activity android:name=".Timer_Activity" />
         <activity android:name=".AnimationActivity"></activity>
+        <activity android:name=".AnimatorActivity"></activity>
     </application>
 
 </manifest>

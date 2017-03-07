@@ -91,6 +91,7 @@
     </LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/main_fl"
         android:layout_above="@id/tool_bar"
         android:layout_below="@id/title_bar"
         android:layout_width="match_parent"
@@ -112,6 +113,16 @@
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:text="Animation"
+            android:textAllCaps="false"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/main_timer_bt_3"
+            android:layout_toRightOf="@id/main_timer_bt_2"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Animator"
             android:textAllCaps="false"
             android:background="@color/colorPrimaryDark"
             android:textSize="20sp"/>
