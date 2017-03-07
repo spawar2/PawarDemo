@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ScaleGestureDetectorCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,6 +16,14 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.Gravity;
+
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.example.gsu.pawardemo.bean.Book;
 import com.example.gsu.pawardemo.util.UtilLog;
@@ -33,6 +43,9 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
     private Button main_timer_bt_2;
     private Button main_timer_bt_3;
     private GestureDetector mGestureDetector;
+    private ImageButton tog_id;
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mToggle;
 
     @BindView(R.id.main_fl)
     RelativeLayout fl;
@@ -53,6 +66,12 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
         mGestureDetector = new GestureDetector(this, new simpleGestureListener());
         fl.setOnTouchListener(this);
 
+         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+      //  mToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+      //  mDrawerLayout.addDrawerListener(mToggle);
+       // mToggle.syncState();
+
+
     }
 
     private void initialView(){
@@ -62,6 +81,7 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
         main_timer_bt = (Button) findViewById(R.id.main_timer_bt);
         main_timer_bt_2 = (Button) findViewById(R.id.main_timer_bt_2);
         main_timer_bt_3 = (Button) findViewById(R.id.main_timer_bt_3);
+        tog_id = (ImageButton) findViewById(R.id.tog_id);
     }
 
     private void initialListener() {
@@ -97,7 +117,7 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
             }
         });
 
-        main_timer_bt.setOnClickListener(new View.OnClickListener() {
+       main_timer_bt.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
@@ -135,6 +155,23 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
                 startActivityForResult(intent,3);
             }
         });
+
+        tog_id.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                //       Intent intent = new Intent(v.getContext(), ListViewActivity.class);
+                //     startActivity(intent);
+             //   Intent intent = new Intent(v.getContext(), MainActivity.class);
+              //  startActivityForResult(intent,3);
+
+
+                mDrawerLayout.openDrawer(Gravity.LEFT);          }
+
+        });
+
 
         activityswitch.setOnClickListener(new View.OnClickListener() {
             @Override

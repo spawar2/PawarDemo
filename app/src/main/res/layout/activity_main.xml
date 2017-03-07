@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/black">
 
 
@@ -20,6 +21,7 @@
             android:layout_alignParentLeft="true"
             android:background="@android:color/transparent"
             android:src="@drawable/bt_style"
+            android:id="@+id/tog_id"
             android:layout_marginLeft="12dp"/>
 
 
@@ -85,9 +87,6 @@
             android:layout_weight="1"
             />
 
-
-        />
-
     </LinearLayout>
 
     <RelativeLayout
@@ -98,6 +97,22 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
+        <android.support.v4.widget.DrawerLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/drawerLayout">
+
+          <android.support.design.widget.NavigationView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:menu="@menu/navigation_menu"
+              android:layout_gravity="start"
+              >
+
+          </android.support.design.widget.NavigationView>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
         <Button
             android:id="@+id/main_timer_bt"
             android:layout_width="70dp"
@@ -105,30 +120,36 @@
             android:text="Timer"
             android:textAllCaps="false"
             android:background="@color/colorPrimaryDark"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            />
 
-        <Button
-            android:id="@+id/main_timer_bt_2"
-            android:layout_toRightOf="@id/main_timer_bt"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:text="Animation"
-            android:textAllCaps="false"
-            android:background="@color/colorPrimaryDark"
-            android:textSize="20sp"/>
+            <Button
+                android:id="@+id/main_timer_bt_2"
+                android:layout_toRightOf="@id/main_timer_bt"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="Animation"
+                android:textAllCaps="false"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                />
+            
+            <Button
+                android:id="@+id/main_timer_bt_3"
+                android:layout_toRightOf="@id/main_timer_bt_2"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="Animator"
+                android:textAllCaps="false"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                />
 
-        <Button
-            android:id="@+id/main_timer_bt_3"
-            android:layout_toRightOf="@id/main_timer_bt_2"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:text="Animator"
-            android:textAllCaps="false"
-            android:background="@color/colorPrimaryDark"
-            android:textSize="20sp"/>
+</RelativeLayout>
+
+        </android.support.v4.widget.DrawerLayout>
 
     </RelativeLayout>
-
-
 
 </RelativeLayout>
