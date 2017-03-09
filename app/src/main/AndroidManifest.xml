@@ -34,8 +34,12 @@
             android:name=".ActivityD"
             android:launchMode="singleInstance" />
         <activity android:name=".Timer_Activity" />
-        <activity android:name=".AnimationActivity"></activity>
-        <activity android:name=".AnimatorActivity"></activity>
+        <activity android:name=".AnimationActivity" />
+        <activity android:name=".AnimatorActivity" />
+        <activity
+            android:name=".Quiz"
+            android:label="@string/title_activity_quiz"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

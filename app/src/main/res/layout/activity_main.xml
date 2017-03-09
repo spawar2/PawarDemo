@@ -146,6 +146,17 @@
                 android:textSize="20sp"
                 />
 
+            <Button
+        android:id="@+id/main_timer_bt_4"
+        android:layout_toRightOf="@id/main_timer_bt_3"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="Quiz4"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        />
+
 </RelativeLayout>
 
         </android.support.v4.widget.DrawerLayout>

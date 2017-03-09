@@ -47,6 +47,7 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
     private ImageButton tog_id;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
+    private Button main_timer_bt_4;
 
     @BindView(R.id.main_fl)
     RelativeLayout fl;
@@ -83,6 +84,7 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
         main_timer_bt_2 = (Button) findViewById(R.id.main_timer_bt_2);
         main_timer_bt_3 = (Button) findViewById(R.id.main_timer_bt_3);
         tog_id = (ImageButton) findViewById(R.id.tog_id);
+        main_timer_bt_4 = (Button) findViewById(R.id.main_timer_bt_4);
     }
 
     private void initialListener() {
@@ -173,6 +175,21 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
                 }else{
                     mDrawerLayout.openDrawer(Gravity.LEFT); //OPEN Nav Drawer!
                 }
+            }
+
+        });
+
+        main_timer_bt_4.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                //       Intent intent = new Intent(v.getContext(), ListViewActivity.class);
+                //     startActivity(intent);
+                   Intent intent = new Intent(v.getContext(), Quiz.class);
+                   startActivityForResult(intent,3);
+
             }
 
         });
