@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:orientation="vertical" android:layout_width="match_parent"
-android:layout_height="match_parent">
-
-
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
 
     <TextView
         android:layout_width="match_parent"
@@ -11,62 +9,64 @@ android:layout_height="match_parent">
         android:text="Quiz4"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="36sp"/>
+        android:textSize="36sp"
+        />
 
-
-<RadioGroup
-    android:id="@+id/rdg2"
-    android:layout_width="match_parent"
-    android:layout_height="350dp">
-
-    <RadioButton
+    <View
         android:layout_width="match_parent"
-        android:id="@+id/rbb1"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:gravity="left|center_vertical"
-        android:text="QuizDialog"/>
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/white"/>
 
-    <RadioButton
+
+    <RadioGroup
+        android:id="@+id/quizrdg"
         android:layout_width="match_parent"
-        android:id="@+id/rbb2"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:gravity="left|center_vertical"
-        android:text="QuizDialog"/>
 
-</RadioGroup>
+        android:layout_height="150dp">
 
-    <RelativeLayout
+
+        <RadioButton
+            android:id="@+id/quiz1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:gravity="left|center_vertical"
+            android:text="Button 1"/>
+        <RadioButton
+            android:id="@+id/quiz2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left|center_vertical"
+            android:text="Button 2"/>
+
+    </RadioGroup>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
         <Button
-            android:id="@+id/dialog_cancel"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:textAllCaps="false"
-            android:background="@color/white"
-            android:textSize="20sp"
+            android:id="@+id/quizOK"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            android:layout_weight="1"
+            android:text="OK"
+            android:textSize="36sp"
+            />
+        <Button
+            android:id="@+id/quizCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            android:layout_weight="1"
             android:text="Cancel"
-            android:layout_alignParentTop="true"
-            android:textColor="@android:color/black"
+            android:textSize="36sp"
             />
+    </LinearLayout>
 
-        <Button
-            android:width="10dp"
-            android:layout_toRightOf="@+id/dialog_cancel"
-            android:text="Ok"
-            android:textColor="@android:color/black"
-            android:id="@+id/dialog_okay"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:textAllCaps="false"
-            android:background="@color/white"
-            android:textSize="20sp"
-            android:layout_alignParentTop="true"
-            />
-
-    </RelativeLayout>
-
-
-</LinearLayout>
+</RelativeLayout>

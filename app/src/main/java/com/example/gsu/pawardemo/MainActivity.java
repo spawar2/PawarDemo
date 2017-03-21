@@ -58,6 +58,20 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
         startActivityForResult(intent,2);
     }
 
+    @OnClick(R.id.main_timer_bt_4)
+    public void toQuiz(){
+        final Quiz dialog = new Quiz(this, new Quiz.ICustomDialogEventListener(){
+            @Override
+            public void onClickListener() {
+                Intent intent = new Intent();
+                intent.putExtra("message", "Dialog");
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
+        dialog.show();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -175,21 +189,6 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
                 }else{
                     mDrawerLayout.openDrawer(Gravity.LEFT); //OPEN Nav Drawer!
                 }
-            }
-
-        });
-
-        main_timer_bt_4.setOnClickListener(new View.OnClickListener() {
-
-
-            @Override
-            public void onClick(View v) {
-
-                //       Intent intent = new Intent(v.getContext(), ListViewActivity.class);
-                //     startActivity(intent);
-                   Intent intent = new Intent(v.getContext(), Quiz.class);
-                   startActivityForResult(intent,3);
-
             }
 
         });

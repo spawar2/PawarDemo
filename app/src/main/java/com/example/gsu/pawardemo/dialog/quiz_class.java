@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
-import com.example.gsu.pawardemo.Dialog_new.custom_dialog;
 import com.example.gsu.pawardemo.Quiz;
 import com.example.gsu.pawardemo.R;
 
