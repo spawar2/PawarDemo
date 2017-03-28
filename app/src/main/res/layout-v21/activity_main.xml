@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black">
+
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/holo_blue_bright">
+
+       
+        
+        <Toolbar
+
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/bt_style"
+            android:id="@+id/tog_id"
+            android:layout_marginLeft="12dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="30sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"/>
+
+
+        <ImageButton
+
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bt_style_xml"
+            android:id="@+id/activityswitch"
+            android:layout_marginRight="12dp"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_green_light">
+
+        <ImageButton
+            android:id="@+id/bt1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/bt2"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/id_bt3"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center_vertical"
+            android:onClick="sendMessage"
+            android:background="@android:color/white"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_fl"
+        android:layout_above="@id/tool_bar"
+        android:layout_below="@id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <android.support.v4.widget.DrawerLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/drawerLayout">
+
+          <android.support.design.widget.NavigationView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:menu="@menu/navigation_menu"
+              android:layout_gravity="start"
+              >
+
+          </android.support.design.widget.NavigationView>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <Button
+            android:id="@+id/main_timer_bt"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:text="Timer"
+            android:textAllCaps="false"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            />
+
+            <Button
+                android:id="@+id/main_timer_bt_2"
+                android:layout_toRightOf="@id/main_timer_bt"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="Animation"
+                android:textAllCaps="false"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                />
+            
+            <Button
+                android:id="@+id/main_timer_bt_3"
+                android:layout_toRightOf="@id/main_timer_bt_2"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="Animator"
+                android:textAllCaps="false"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                />
+
+</RelativeLayout>
+
+        </android.support.v4.widget.DrawerLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
